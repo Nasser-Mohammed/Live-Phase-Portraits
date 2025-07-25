@@ -58,115 +58,43 @@ canvas {
   border-radius: 6px;
 }
 
-/* Planet palette */
-#planet-palette {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  background: #222;
-  padding: 15px;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-
-#planet-palette img {
-  width: 50px;
-  cursor: grab;
-  transition: transform 0.2s ease;
-}
-
-#planet-palette img:hover {
-  transform: scale(1.2);
-}
-
-/* Buttons and selects */
-button, select {
-  padding: 10px 16px;
-  margin: 10px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 6px;
+.dimension-buttons button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
-button {
-  background-color: #0c3969;
-  color: white;
-}
-
-button:hover {
-  background-color: #005f99;
-}
-#reset {
-  background-color: #9e3c39;
-  color: white;
-}
-
-#reset:hover {
-  background-color: #9e3c39;
-}
-
-
-select {
-  background-color: #eee;
-}
-
-#time-display {
-  margin-top: 20px;
-  font-weight: bold;
-}
-
-/* Mass control panel layout */
-#mass-controls {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-bottom: 16px;
-  font-family: system-ui, sans-serif;
-  font-size: 15px;
-}
-
-/* Base label styling */
-#mass-controls label {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#dimension-select {
+  margin: 10px 0;
   padding: 10px 14px;
-  border-radius: 10px;
-  color: #fff;
-  font-weight: bold;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Solid background colors for each planet */
-#earth-label {
-  background-color: #003b0e; /* green */
-}
-
-#neptune-label {
-  background-color: #0c3969; /* blue */
-}
-
-#alien-label {
-  background-color: #612c75; /* purple */
-}
-
-/* Input field styling */
-#mass-controls input[type="number"] {
-  width: 60px;
-  margin-top: 6px;
-  padding: 6px;
-  border: none;
+  font-size: 16px;
+  border: 1px solid #ccc;
   border-radius: 6px;
-  background-color: #fff;
-  color: #000;
-  font-size: 14px;
-  text-align: center;
+  background-color: #f5f5f5;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
-#mass-controls input[type="number"]:focus {
-  outline: none;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+#dimension-select:hover {
+  border-color: #888;
+}
+
+#dimension-select:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+  background-color: #fff;
+}
+
+label[for="dimension-select"] {
+  font-weight: 600;
+  font-size: large;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  color: #000000;
 }
