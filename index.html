@@ -24,22 +24,50 @@
 
       <hr>
 
-    <label for="dimension-select">Select system dimension:</label>
+    <label for="dimension-select">Select dimension:</label>
     <select id="dimension-select">
-      <option value="1">1D</option>
-      <option value="2">2D</option>
-      <option value="3">3D</option>
+      <option value="2D">2D</option>
+      <option value="3D">3D</option>
     </select>
+
+    <!-- 2D system selector -->
+    <div id="twoD-container">
+      <label for="system-select-2d">Select 2D system:</label>
+      <select id="system-select-2d">
+        <option value="lotka">Lotka-Volterra</option>
+        <option value="vanDerPol">Van der Pol</option>
+        <option value="fitzHugh_Nagumo">FitzHugh-Nagumo</option>
+        <option value="spiral">Spiral</option>
+        <option value="saddle_node">Saddle-Node</option>
+        <option value="brusselator">Brusselator</option>
+        <option value="damped_pendulum">Damped and Forced Pendulum</option>
+        <option value="rayleigh">Rayleigh Oscillator</option>
+        <option value="hopf_normal">Hopf Normal Form</option>
+        <option value="morris_lecar">Morris-Lecar</option>
+        <option value="oregonator">Oregonator</option>
+        <option value="relay">Relay</option>
+      </select>
     </div>
-    <button id="reset-btn" style="position: absolute; top: 10px; left: 10px; z-index: 10;">Reset</button>
 
+    <!-- 3D system selector -->
+    <div id="threeD-container" style="display: none;">
+      <label for="system-select-3d">Select 3D system:</label>
+      <select id="system-select-3d">
+        <option value="lorenz">Lorenz</option>
+        <option value="rossler">Rössler</option>
+      </select>
+    </div>
 
+    <br>
+    <br>
+    <button id="reset-btn">Reset</button>
+    </div>
     <div class="canvas-container">
-      <canvas id="canvas2d" width="1800" height="900" style="position:absolute; z-index:0;"></canvas>
-      <canvas id="canvas3d" width="1800" height="900" style="position:absolute; z-index:1;"></canvas>
+      <canvas id="canvas2d" width="1800" height="1050" style="position:absolute; z-index:0;"></canvas>
+      <canvas id="canvas3d" width="1800" height="1050" style="position:absolute; z-index:1;"></canvas>
       </div>
+      <div style="height: 500px;"></div>
 
-      
     <script type="module" src="main.js?v=2"></script>
 </body>
 </html>
