@@ -60,7 +60,7 @@ class twoDimensionalSystems {
     }
 
     else if (this.choice === "vanDerPol") {
-      const xMin = -6.5, xMax = 6.5;
+      const xMin = -6, xMax = 6;
       const yMin = -4, yMax = 4;
       const scaleX = width / (xMax - xMin);
       const scaleY = height / (yMax - yMin);
@@ -105,8 +105,8 @@ class twoDimensionalSystems {
       return [canvasX, canvasY];
     }
     else if (this.choice === "damped_pendulum") {
-      const xMin = -3*Math.PI, xMax = 3*Math.PI;
-      const yMin = -8, yMax = 8;
+      const xMin = -Math.PI, xMax = Math.PI;
+      const yMin = -4, yMax = 4;
       const scaleX = width / (xMax - xMin);
       const scaleY = height / (yMax - yMin);
       const canvasX = (x - xMin) * scaleX;
@@ -224,7 +224,7 @@ class twoDimensionalSystems {
   }
 
   vanDerPol(x,y, t){
-    const mu = 0.5;
+    const mu = .5;
     const dx = y;
     const dy = mu*(1-x**2)*y-x;
     return [dx, dy];
